@@ -2,7 +2,7 @@ using Dapper;
 using System.Data.SqlClient;
 
 public class BD{
-    private static string _connectionString = @"Server=localhost; DataBase=LoginBD; Trusted_Connection = True;";
+    private static string _connectionString = @"Server=localhost; DataBase=TP10.scriptBDSeries; Trusted_Connection = True;";
     private static List<Serie> listaSeries = new List<Serie>();
     private static List<Actores> listaActores = new List<Actores>();
     private static List<Temporadas> listaTemporadas = new List<Temporadas>();

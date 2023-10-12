@@ -5,20 +5,20 @@
 <script src="site.js">
 
 
-@foreach (Serie ser in ViewBag.listaSeries)
+@foreach(Serie ser in ViewBag.listaSeries)
 {
   <div class="card" style="width: 18rem;">
-  <div id = "ImgSerie"></div>
-  <div class="card-body">
-    <h5 class="card-title">@ViewBag.Serie.Nombre</h5>
-    <button type="button" class="btn btn-secondary" data-toggle = "modal" data-target = "#ModalTemporadas" onclick = "MostrarActores(@ViewBag.Temporadas.IdTemporada)">Temporadas</button>
-    <button type="button" class="btn btn-secondary" data-toggle = "modal" data-target = "#ModalActores" onclick = "MostrarActores(@ViewBag.Actores.IdActor)">Actores</button>
-    <button type="button" class="btn btn-secondary" data-toggle = "modal" data-target = "#ModalMasInfo" onclick = "MostrarMasInfo(@ViewBag.Series.IdSerie)">Mas info</button> 
+    <img src="@ser.ImagenSerie" alt="Imagen principal">
+    <div class="card-body">
+      <h5 class="card-title">@ser.Nombre</h5>
+      <button type="button" class="btn btn-secondary" data-toggle = "modal" data-target = "#ModalTemporadas" onclick = "MostrarActores(@ViewBag.Temporadas.IdTemporada)">Temporadas</button>
+      <button type="button" class="btn btn-secondary" data-toggle = "modal" data-target = "#ModalActores" onclick = "MostrarActores(@ViewBag.Actores.IdActor)">Actores</button>
+      <button type="button" class="btn btn-secondary" data-toggle = "modal" data-target = "#ModalMasInfo" onclick = "MostrarMasInfo(@ViewBag.Series.IdSerie)">Mas info</button> 
+    </div>
   </div>
-</div>
 }
 
-//Modal Actores
+
 <div class="modal" tabindex="-1" id = "ModalActores">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -30,13 +30,13 @@
         <div id = "NombreActores"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 </div>
 
-//Modal Temporadas
+
 <div class="modal" tabindex="-1" id = "ModalTemporadas">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -49,13 +49,13 @@
         <div id = "NombreTemporada"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 </div>
 
-//Modal Mas Info
+
 <div class="modal" tabindex="-1" id = "ModalMasInfo">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -68,7 +68,7 @@
         <div id = "ImgSerie"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
