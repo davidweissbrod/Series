@@ -1,4 +1,5 @@
-﻿function MostarActores(idActor){
+﻿//Ajax Actores
+function MostarActores(idActor){
     $.ajax({
         type: 'POST',
         dataType: 'JSON',
@@ -11,6 +12,7 @@
     });
 }
 
+//Ajax Temporadas
 function MostrarTemporadas(idTemporada){
     $.ajax({
         type: 'POST',
@@ -25,6 +27,7 @@ function MostrarTemporadas(idTemporada){
     });
 }
 
+//Ajax Mas Info
 function MostrarMasInfo(idSerie){
     $.ajax({
         type: 'POST',

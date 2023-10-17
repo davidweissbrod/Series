@@ -15,7 +15,18 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.listaTemporadas = BD.LevantarTemporadas();
+        ViewBag.listaActores = BD.LevantarActores();
         ViewBag.listaSeries = BD.LevantarSeries();
+        foreach(Serie ser in ViewBag.listaSeries){
+            ViewBag.IdSerie = ser.IdSerie;
+        }
+        foreach(Actores act in ViewBag.listaActores){
+            ViewBag.IdActor = act.IdActor;
+        }
+        foreach(Temporadas temp in ViewBag.listaTemporadas){
+            ViewBag.IdTemporada = temp.IdTemporada;
+        }
         return View("Index");
     }
 
@@ -29,7 +40,7 @@ public class HomeController : Controller
         return ViewBag.Temporadas;
     }
 
-    public Serie VerMasInfo(){
+    public Serie VerMasInfoAjax(){
         ViewBag.Series = BD.LevantarSeries();
         return ViewBag.Series;
     }
